@@ -32,7 +32,8 @@ export namespace Math
         static Complex FromAlgebraicForm(double re, double im) {
             return Complex(re, im);
         }
-
+        // Функция вычисления экспоненты для комплексного числа
+        
         // Функция-член Re
         double Re() const {
             return m_re;
@@ -157,11 +158,11 @@ export namespace Math
         return Complex(realPart, imagPart);
     }
 
-    Complex operator""i(long double imag) {
+    export Complex operator""i(long double imag) {
         return Complex(0, imag);
     }
 
-    Complex operator""i(unsigned long long imag) {
+    export Complex operator""i(unsigned long long imag) {
         return Complex(0, imag);
     }
    
@@ -169,4 +170,5 @@ export namespace Math
         stream << complex.Re() << " + " << complex.Im() << "i";
         return stream;
     }
+   
 }

@@ -17,7 +17,7 @@ export namespace Math
         // Конструктор по умолчанию
         Rational() : m_nominator(0), m_denominator(1) {}
 
-        // Конструктор инициализации
+        // Конструктор инициализации 
         Rational(int nominator, int denominator){
             ReduceFraction(nominator, denominator);
             m_nominator = nominator;
