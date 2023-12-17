@@ -15,7 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Math_Complex.ixx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Math.ixx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Math_Rational.ixx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Math_Functions.ixx">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
