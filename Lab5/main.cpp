@@ -3,13 +3,33 @@ import Math;
 #include <iostream>
 
 using namespace Math;
+// ‘ункци€ дл€ вычислени€ экспоненты комплексного числа
+static Complex exp(const Complex& z) {
 	
+	double x = z.Re();
+	double y = z.Im();
+
+	// e^x
+	double expX = std::exp(x);
+
+	// e^(iy) = cos(y) + i * sin(y) ( формула Ёйлера )
+	double expIY_real = std::cos(y);
+	double expIY_imag = std::sin(y);
+
+	// ”множим результаты
+	double resultReal = expX * expIY_real;
+	double resultImag = expX * expIY_imag;
+
+	return Complex(resultReal, resultImag);
+}
+
 	Complex f(const Complex& z)
 	{
-		Complex rezult;
-		Complex u = z;
-		Complex a = 1.0i;
-		return rezult = 2 + 3 * a * exp(double(-u));
+		Complex a = (0, 1);
+		Complex expU = exp(-z);
+		Complex a3 = 3 * a;
+		Complex rezult = 2 + (a3 * expU);
+		return rezult;
 	}
 	Rational f(const Rational& u) {
 		// a = 1/2
